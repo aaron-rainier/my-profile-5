@@ -78,3 +78,20 @@ Q2 faible mais bien analysé (root cause = brand judgment) + redressement Q3 = e
 
 ### Fichiers dans le repo (branche claude/marketplace-simulation-task-doyrrb, dossier business-simulation/)
 PLAN_DE_LA_SEMAINE.md · Business_Plan_Template.docx · AeroForge_Business_Plan_FINAL.docx (rendu) · Final_Report_Template.docx · Final_Presentation_Skeleton.pptx · logos AeroForge · pubs Summit/Bolt (PNG).
+
+
+## MISE À JOUR — mercredi soir #2 : ACCÈS DIRECT PLATEFORME ✅
+
+### Claude a maintenant accès direct au jeu
+- Connexion via **portail HBSP** (hbsp.harvard.edu, coursepack 1405001 "Business simulation Captsone - MAEMDF4A0025", bouton Run Simulation → LTI vers play.marketplace-simulation.com). Codes HBSP d'Aaron. Le login direct Marketplace ne marche PAS (compte LTI sans mot de passe propre).
+- Technique : environnement réseau "accès complet" requis + Chromium avec `--ssl-version-max=tls1.2` (incompatibilité TLS du proxy). Scripts dans le scratchpad de session (`mpl/browser.js` + steps).
+- Navigation par URL : `engine.php?tpl=student&tab=workspace&quarter=N&resource=<slug>` (slugs sans tirets : balancedscorecard, brandjudgment, modifybrand, pricing, etc.)
+
+### Résultats Q3 (détail complet : Q3_RESULTS_ET_PLAN_Q4.md + captures q3-results/)
+- Total Performance **0,094** (moy 0,943) ; cumulé 0,045. Ventes 267 (+42 perdues en stock-out), net −105 942 $.
+- **Bolt brand judgment 77 = n°1 Speed ex æquo** ✅ · Summit 65 < minimum 70 (guidon Comfort straight + selle comfort à corriger → Basic straight + all-purpose).
+- **Pub Bolt-Outrun 35/100 en Speed** (claims Mountain dedans) — warning officiel. Summit-Conquer 70 OK.
+- Productivité 68,6% ↓, turnover 32% — salaires marché ont monté (WBB 15 196 vs nous 13 404).
+- **VC 2,5 M$ crédités en Q4** → ~3,85 M$ de cash.
+- Amsterdam : demande 1 900 (Speed 745), 3 concurrents seulement → ouvrir en Q4 comme promis au BP.
+- ⚠️ État Q4 dans le jeu : prix NON saisis, projection demande vide, marques/pubs non modifiées. TOUT à saisir avant jeudi 11h.
