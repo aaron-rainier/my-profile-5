@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" fill="#ffffff"/>
+  <!-- speed lines -->
+  <g stroke="#c3cad6" stroke-width="16" stroke-linecap="round">
+    <line x1="100" y1="460" x2="196" y2="460"/>
+    <line x1="64"  y1="520" x2="196" y2="520"/>
+    <line x1="100" y1="580" x2="196" y2="580"/>
+  </g>
+  <!-- wheels -->
+  <g stroke="#1d232e" stroke-width="22" fill="none">
+    <circle cx="330" cy="520" r="110"/>
+    <circle cx="694" cy="520" r="110"/>
+  </g>
+  <circle cx="330" cy="520" r="12" fill="#1d232e"/>
+  <circle cx="694" cy="520" r="12" fill="#1d232e"/>
+  <!-- A frame -->
+  <g stroke="#ff6b2c" stroke-linecap="round" fill="none">
+    <path d="M 330 520 L 512 210 L 694 520" stroke-width="36"/>
+    <line x1="401" y1="400" x2="623" y2="400" stroke-width="30"/>
+  </g>
+  <!-- wordmark -->
+  <text x="512" y="800" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-style="italic" font-weight="bold" font-size="104" letter-spacing="4"><tspan fill="#1d232e">AERO</tspan><tspan fill="#ff6b2c">FORGE</tspan></text>
+  <!-- tagline -->
+  <text x="512" y="872" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" letter-spacing="9" fill="#7b8494">ELITE CARBON · FORGED FOR YOU</text>
+</svg>
