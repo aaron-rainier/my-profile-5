@@ -55,3 +55,26 @@ Nom AeroForge, magasin NYC (200k setup + 62k lease/tr), usine 2 imprimantes (16/
 
 ## Angle "narratif" pour les documents
 Q2 faible mais bien analysé (root cause = brand judgment) + redressement Q3 = exactement ce qui fait gagner des points. Un mauvais trimestre compris et corrigé > un bon trimestre subi.
+
+
+## MISE À JOUR — mercredi soir (Q3 soumis, BP rendu)
+
+### Décisions Q3 soumises (15h)
+- Prix baissés : **Sumit 1300 (rebate 50, prio 2), Bolt 1500 (rebate 0, prio 1)**.
+- Consigne donnée avant submit : modifier les 2 marques (carbon premium, freins Precision/suspension pour Sumit ; carbon premium + guidon aéro + GPS pour Bolt) + saisir demand projection 250 (Sumit 160/Bolt 90) + refaire les pubs. **À VÉRIFIER dans les résultats Q3 si les modifs de marques ont été faites à temps.**
+- Q2 réel pour référence : ventes 161 (Sumit 128 / Bolt 33), productivité 69,9%, utilisation capacité 59%.
+
+### Business Plan : RENDU ✅ (mercredi 18h30, PDF 7 pages)
+- Version personnalisée par l'équipe (storytelling "A Tough Lesson / The Pivot").
+- Demande 2 500 000 $ : magasins Amsterdam Q4 + Bangalore Q5 (520k), +2 imprimantes (480k), R&D features terrain/aéro (450k), pub 3 villes (320k), force de vente (370k), fonds de roulement (360k).
+- Pro forma promis : 600/950/1300 unités Q4-Q6, rentable Q5 (+52k), Q6 +467k.
+- **Les décisions Q4-Q6 doivent rester COHÉRENTES avec ce BP** (les VC/instructeur vérifieront).
+
+### Prochaine étape : QUARTER 4 (submit jeudi 11h)
+1. Jeudi 8h30 : montant VC annoncé par l'instructeur (jeu crédite 2,5M auto, ajusté ensuite).
+2. Analyser résultats Q3 dès réception : scorecard, brand judgments (redesign payé ?), ventes, concurrents.
+3. Décisions Q4 : lancer R&D (~300k), ouvrir Amsterdam (136k+44k), +2 imprimantes si demande Q3 le justifie (480k), embaucher vendeurs pour Amsterdam, ajuster prix/pubs/rémunérations (salaires marché ont bougé), operating capacity selon demande réelle, pro forma ≥300k.
+4. Ensuite : Q5 (jeudi 14h30), Q6 (vendredi 10h), PPT (vendredi 13h30), Final Report (dimanche 20h).
+
+### Fichiers dans le repo (branche claude/marketplace-simulation-task-doyrrb, dossier business-simulation/)
+PLAN_DE_LA_SEMAINE.md · Business_Plan_Template.docx · AeroForge_Business_Plan_FINAL.docx (rendu) · Final_Report_Template.docx · Final_Presentation_Skeleton.pptx · logos AeroForge · pubs Summit/Bolt (PNG).
