@@ -2,7 +2,8 @@
 
 > **À coller au début d'une nouvelle conversation** pour que Claude reprenne le contexte.
 > Jeu : Marketplace Conscious Capitalism — Bikes, Company 6 « AeroForge », play.marketplace-simulation.com.
-> État jeudi ~13h : **Q5 saisi et vérifié, PAS soumis (deadline 14h30). Q6 : vendredi 10h00.**
+> État jeudi ~14h15 : **Q5 SOUMIS ✅ (traitement 14h30). Q6 : deadline vendredi 10h00.**
+> Offre de licence Carbon-Ride : rejetée automatiquement à la soumission (voulu — on possédait déjà les pneus racing sleek).
 
 ## ⚙️ Accès plateforme (procédure validée 2×)
 - Login **hbsp.harvard.edu** (identifiants HBSP d'Aaron, email edu.devinci.fr — redonnés en début de conversation, jamais dans le repo) → My Coursepacks → **1405001** → **Run Simulation** (LTI).

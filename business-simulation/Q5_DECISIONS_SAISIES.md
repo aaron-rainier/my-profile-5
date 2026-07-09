@@ -1,7 +1,8 @@
-# Q5 — DÉCISIONS SAISIES DANS LA PLATEFORME (⚠️ PAS ENCORE SOUMISES)
+# Q5 — DÉCISIONS SAISIES ET ✅ SOUMISES (jeudi ~14h15, avant la deadline 14h30)
 
 > Saisies faites jeudi matin (session Claude via HBSP), chaque save vérifié (`saveResult:true`).
-> **Deadline : jeudi 14h30 (heure du jeu GMT+1). AARON : vérifier puis SOUMETTRE.**
+> **Soumis par Aaron après revue** (target segments confirmés : 1 Mountain / 2 Speed).
+> À la soumission, l'offre de licence Carbon-Ride (178 285 $ pour une techno qu'on possédait déjà) a été automatiquement rejetée — décision d'équipe.
 > Captures de vérification dans `q5-saisies/`.
 
 ## ✅ Ce qui est saisi
