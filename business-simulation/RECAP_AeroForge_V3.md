@@ -51,3 +51,9 @@
 - **Q6 : vendredi 10h00** · **PPT 5-6 slides : vendredi 13h30** (20 %) · **Final Report 6-10 p : dimanche 20h00** (40 %).
 - Narratif : Q2 raté → diagnostic brand judgment → Q3 Bolt 53→77 → Q4 corrections (Summit n°1 Mtn, pubs 80, capacité, salaires) + 2,5 M$ VC déployés selon BP → Q5 expansion (Amsterdam, features, enriched carbon) → Q6 relance Mountain. Investment in Future = max classe dès Q4.
 - Équipe : Aaron Rainier (Président) · Luna Carballo (Mkt) · Justine Pellier (Analytics) · Patrick Yang (Fin) · Sarah Baraket (Sales) · Teysnim Abichou (HR).
+
+## 📊 MAJ jeudi soir — PPT prêt (v2 auditée) + plan de vendredi
+- **AeroForge_Final_Presentation.pptx** (+ PDF) dans le repo : 6 slides conformes au squelette, notes orateur FR avec minutage (Aaron 1 · Sarah 2 · Justine 3 · Luna 4 · Teysnim 5 · Patrick+Aaron 6 = 10:00). Chiffres audités (tout Q2-Q4 + pro forma Q6 vérifiés en jeu ; Q5 sourcé du relevé Q6_DECISIONS).
+- Scripts de régénération : `tools/make_charts.py` (matplotlib, palette validée orange #eb6834/bleu #2a78d6) + `tools/build_pptx.py` (python-pptx). `pip install python-pptx matplotlib` puis exécuter dans cet ordre. Graphiques dans ppt-charts/.
+- **Vendredi après résultats Q6 (~10h30)** : 1) mettre à jour slide 3 (chart_finance : Q6 réel au lieu de « proj. » ; éventuellement Total Perf Q6 + cumul final) ; 2) re-render + re-push + envoyer à Aaron avant 13h30 ; 3) rédiger le **Final Report** (template Final_Report_Template.docx, 6-10 p, structure guidelines : mission/stratégie/perf par fonction/comparaison chiffrée autres équipes/leçons/préparation du futur + § top recommandations + RSE), livrer un draft vendredi, finaliser avant dimanche 20h.
+- Q6 attendu : Summit V4/BoltV3/Comfy2 enriched carbon, projection 1 800 u, CA proj. 2 482 800, op CF proj. +445 639, cash proj. 1 756 497.
