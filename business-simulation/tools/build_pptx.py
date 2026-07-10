@@ -131,22 +131,26 @@ kicker_title(s, "What happened", "Key results — the honest version")
 s.shapes.add_picture(f"{CHARTS}/chart_totalperf.png", Inches(0.55), Inches(1.75), width=Inches(6.05))
 s.shapes.add_picture(f"{CHARTS}/chart_finance.png", Inches(6.75), Inches(1.75), width=Inches(6.05))
 add_text(s, 0.7, 6.05, 12.0, 0.9, [
-    [("Cumulative scorecard: last. ", 13.5, True, INK, False),
+    [("Cumulative scorecard: last (0.70 vs class avg 14.9). ", 13.5, True, INK, False),
      ("A cumulative index never forgives a failed test market — our Q2 hole followed us to the end.",
       13.5, False, SEC, False)],
+    [("Q6 finale: ", 13.5, True, INK, False),
+     ("2,235 bikes sold · $3.0M revenue · net income +$708k · demand (3,318) outgrew even our "
+      "doubled factory.", 13.5, False, SEC, False)],
     [("Conscious scorecard: ", 13.5, True, INK, False),
-     ("only firm never cited for toxic leaks · employee satisfaction 88% · turnover 32%→11% · "
-      "reputation above class average.", 13.5, False, SEC, False)],
+     ("only firm never cited for toxic leaks · employee satisfaction 88% · turnover 32%→11%.",
+      13.5, False, SEC, False)],
 ], space_after=4)
 footer(s, 3, "Justine", "2:00")
 notes(s, "JUSTINE (2:00)\n"
-         "Les faits, sans filtre. À gauche : notre Total Performance ×70 en trois trimestres — mais "
-         "partie de si bas qu'au cumul nous finissons derniers : un index cumulatif ne pardonne pas "
-         "un Q2 raté. À droite : le chiffre d'affaires a quasiment doublé chaque trimestre, de 226 k$ "
-         "à 2,5 M$ projetés. Les deux creux de cash-flow en Q4-Q5 ne sont pas des pertes subies : "
+         "Les faits, sans filtre. À gauche : Total Performance ×269 en 4 trimestres (0,013 → 3,494) — mais "
+         "partie de si bas qu'au cumul nous finissons derniers (0,70 vs 14,9 de moyenne) : un index "
+         "cumulatif ne pardonne pas un Q2 raté. À droite : le CA a plus que doublé chaque trimestre, "
+         "de 226 k$ au Q2 à 3,0 M$ au Q6. Les creux de cash-flow Q4-Q5 ne sont pas des pertes subies : "
          "c'est le déploiement volontaire des 2,5 M$ de capital-risque — R&D, capacité, magasins — "
-         "exactement comme promis au business plan. Résultat : premier trimestre rentable en Q6, "
-         "+446 k$. Et côté Conscious Capitalism : seule entreprise jamais citée pour fuites toxiques, "
+         "exactement comme promis au business plan. Et ça a payé : premier trimestre rentable au Q6 — "
+         "+708 k$ de résultat net, 2 235 vélos vendus, demande de 3 318 qui dépasse même notre usine "
+         "doublée. Côté Conscious Capitalism : seule entreprise jamais citée pour fuites toxiques, "
          "satisfaction employés 88 %, turnover divisé par trois. [Passe à Luna]")
 
 # ================================================================ SLIDE 4
@@ -158,8 +162,8 @@ bullets(s, 0.7, 1.8, 5.7, 4.8, [
      "Q2 test market: a Speed ad built on Mountain claims (35/100) and “comfort” parts on a "
      "mountain bike (62 < the 70 recommendation threshold). Demand starved for two quarters."),
     ("Success — designed from data",
-     "From Q3: copy the revealed component matrices and leader ad structures. Bolt 53→77 (#1 Speed), "
-     "ad 35→80 (best Speed ad), Summit #1 Mountain (Q4)."),
+     "From Q3: copy the revealed component matrices and leader ad structures — then enriched carbon "
+     "across the range. By Q6: Bolt 53→87, Summit 62→83, Comfy 65→78. Every product top-tier."),
     ("The method change, mid-week",
      "Buy every study, justify every field with a number, verify every save — "
      "Check Ad Claims · Final Check · pro forma last."),
@@ -172,9 +176,9 @@ notes(s, "LUNA (2:15)\n"
          "faux dans les données — 62, sous le seuil de recommandation de la Customer Union. Résultat : "
          "demande étouffée pendant deux trimestres. Le déclic : à partir du Q3, plus aucune décision "
          "sans donnée. Toutes les études achetées, les matrices de composants copiées, nos pubs "
-         "restructurées sur les meilleures. Regardez le graphe : chaque métrique corrigée a bougé — "
-         "marque Bolt 53→77 numéro 1 Speed, pub 35→81 meilleure pub Speed, Summit numéro 1 Mountain, "
-         "productivité +14 points, satisfaction vendeurs 88 %. La méthode a changé au milieu de la "
+         "restructurées sur les meilleures, puis l'enriched carbon sur toute la gamme au Q6. Regardez le "
+         "graphe : chaque métrique corrigée a bougé — Bolt 53→87, Summit 62→83 top-2 Mountain, Comfy "
+         "65→78 top-2 Recreation, pub 35→80, productivité +14 points. La méthode a changé au milieu de la "
          "semaine : acheter la donnée, justifier chaque champ, tout vérifier. [Passe à Teysnim]")
 
 # ================================================================ SLIDE 5
@@ -228,8 +232,8 @@ strip.fill.solid(); strip.fill.fore_color.rgb = RGBColor(0xF6, 0xF1, 0xEC)
 strip.line.fill.background()
 add_text(s, 0.95, 4.72, 11.4, 0.6,
          [[("AeroForge exits Q6:  ", 13.5, True, NAVY, False),
-           ("100% enriched-carbon range · first profitable quarter (+$446k) · zero debt · "
-            "#1 in class on Investment in Future & Financial Risk", 13.5, False, SEC, False)]])
+           ("100% enriched-carbon range · first profitable quarter (net +$708k) · $2.06M cash, zero debt · "
+            "#1 in class on cumulative Investment in Future & Financial Risk", 13.5, False, SEC, False)]])
 add_text(s, 0.7, 5.75, 11.9, 0.9,
          [[("Our question for you:  ", 18, True, ORANGE, False),
            ("your scorecard is cumulative too — which “Q2 mistake” are you still paying for, "
@@ -241,8 +245,9 @@ notes(s, "PATRICK (1:30)\n"
          "trimestre raté coûte cinquante fois le prix des études. Ce que nous ne referons jamais : "
          "lancer quoi que ce soit sans benchmark — une pub, un salaire, un prix. Le marché avait "
          "déjà publié la bonne réponse ; nous ne l'avions simplement pas achetée. Nous sortons du "
-         "jeu avec une gamme 100 % enriched carbon, le produit Mountain le mieux noté, un premier "
-         "trimestre rentable et zéro dette.\n\n"
+         "jeu avec une gamme 100 % enriched carbon au top des classements, +708 k$ de résultat net "
+         "au Q6, 2,06 M$ de trésorerie, zéro dette — et le titre de n°1 de la classe au cumul en "
+         "Investment in Future et en Financial Risk.\n\n"
          "AARON (0:15, conclusion)\n"
          "On vous laisse avec une question : votre scorecard à vous aussi est cumulatif. Quelle est "
          "l'erreur de Q2 que vous payez encore — et l'avez-vous vraiment diagnostiquée ? Merci.\n\n"

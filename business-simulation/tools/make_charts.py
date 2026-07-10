@@ -29,42 +29,36 @@ def style_ax(ax, ygrid=True):
     ax.tick_params(length=0)
 
 # ---------------------------------------------------------------- chart 1
-# Total Performance per quarter — AeroForge vs class average
-q = ["Q2", "Q3", "Q4", "Q5"]
-us = [0.013, 0.094, 0.266, 0.957]
-avg = [0.229, 0.943, 4.190, None]
+# Total Performance per quarter — AeroForge (class avg as annotations)
+q = ["Q2", "Q3", "Q4", "Q5", "Q6"]
+us = [0.013, 0.094, 0.266, 0.957, 3.494]
+avg_txt = ["class avg 0.23", "0.94", "4.19", "n/a", "83.7"]
 
 fig, ax = plt.subplots(figsize=(6.0, 4.1), dpi=200)
-x = range(len(q)); w = 0.36
-b1 = ax.bar([i - w/2 for i in x], us, width=w, color=ORANGE, zorder=3,
-            edgecolor=SURF, linewidth=1.2, label="AeroForge")
-b2 = ax.bar([i + w/2 for i in x], [v if v else 0 for v in avg], width=w,
-            color=BLUE, zorder=3, edgecolor=SURF, linewidth=1.2, label="Class average")
+x = range(len(q))
+ax.bar(x, us, width=0.5, color=ORANGE, zorder=3, edgecolor=SURF, linewidth=1.2)
 for i, v in enumerate(us):
-    ax.annotate(f"{v:.3f}", (i - w/2, v), textcoords="offset points", xytext=(0, 4),
-                ha="center", fontsize=9, fontweight="bold", color=INK)
-for i, v in enumerate(avg):
-    if v:
-        ax.annotate(f"{v:.2f}", (i + w/2, v), textcoords="offset points", xytext=(0, 4),
-                    ha="center", fontsize=9, color=SEC)
-ax.annotate("n/a", (3 + w/2, 0.05), textcoords="offset points", xytext=(0, 4),
-            ha="center", fontsize=9, color=MUT)
-ax.annotate("×70 in 3 quarters", xy=(2.6, 2.9), fontsize=10.5, fontweight="bold", color=ORANGE)
+    ax.annotate(f"{v:.3f}", (i, v), textcoords="offset points", xytext=(0, 4),
+                ha="center", fontsize=9.5, fontweight="bold", color=INK)
+for i, t in enumerate(avg_txt):
+    ax.annotate(t, (i, 0), textcoords="offset points", xytext=(0, -30),
+                ha="center", fontsize=8, color=MUT, annotation_clip=False)
+ax.annotate("×269 in 4 quarters", xy=(0.55, 2.9), fontsize=11, fontweight="bold", color=ORANGE)
 ax.set_xticks(list(x)); ax.set_xticklabels(q, fontsize=10)
-ax.set_ylim(0, 4.8)
-ax.set_title("Total Performance per quarter", fontsize=12.5, fontweight="bold",
+ax.set_ylim(0, 4.0)
+ax.set_title("AeroForge Total Performance per quarter", fontsize=12.5, fontweight="bold",
              color=INK, loc="left", pad=14)
-ax.legend(frameon=False, fontsize=9, loc="upper left", handlelength=1.2, handleheight=1.0)
 style_ax(ax)
 fig.tight_layout()
+fig.subplots_adjust(bottom=0.17)
 fig.savefig(f"{OUT}/chart_totalperf.png", facecolor=SURF)
 plt.close(fig)
 
 # ---------------------------------------------------------------- chart 2
 # Revenue & operating cash flow, one $k axis
-q2 = ["Q2", "Q3", "Q4", "Q5", "Q6 proj."]
-rev = [226, 373, 740, 1440, 2483]
-ocf = [-131, -86, -829, -1226, 446]
+q2 = ["Q2", "Q3", "Q4", "Q5", "Q6"]
+rev = [226, 373, 740, 1440, 3018]
+ocf = [-131, -86, -829, -1226, 748]
 
 fig, ax = plt.subplots(figsize=(6.0, 4.1), dpi=200)
 x = range(len(q2)); w = 0.36
@@ -82,10 +76,10 @@ for i, v in enumerate(ocf):
                 ha="center", fontsize=8.5, color=SEC)
 ax.annotate("$2.5M VC deployed:\nR&D, capacity, stores", xy=(1.0, -1450),
             fontsize=9, color=SEC, ha="center", style="italic")
-ax.annotate("1st profitable\nquarter", xy=(4.18, 800), fontsize=9.5,
+ax.annotate("1st profitable\nquarter", xy=(4.18, 1050), fontsize=9.5,
             fontweight="bold", color="#006300", ha="center")
 ax.set_xticks(list(x)); ax.set_xticklabels(q2, fontsize=10)
-ax.set_ylim(-1650, 2900)
+ax.set_ylim(-1650, 3500)
 ax.set_title("Revenue & operating cash flow  ($ thousands)", fontsize=12.5,
              fontweight="bold", color=INK, loc="left", pad=14)
 ax.legend(frameon=False, fontsize=9, loc="upper left", handlelength=1.2)
@@ -98,12 +92,13 @@ plt.close(fig)
 # Diagnose → fix → measure (dumbbell, all 0-100 scales)
 rows = [
     ("Bolt ad judgment",        35.0, 80.0, "best Speed ad (Q4)"),
-    ("Bolt brand judgment",     53.0, 77.0, "#1 Speed (Q3-Q4)"),
-    ("Summit brand judgment",   62.0, 68.0, "#1 Mountain (Q4)"),
+    ("Bolt brand judgment",     53.0, 87.0, "(Q6)"),
+    ("Summit brand judgment",   62.0, 83.0, "top-2 Mountain (Q6)"),
+    ("Comfy brand judgment",    65.0, 78.0, "top-2 Recreation (Q6)"),
     ("Worker productivity %",   68.6, 82.4, ""),
     ("Worker satisfaction %",   71.9, 88.0, ""),
 ]
-fig, ax = plt.subplots(figsize=(6.6, 4.1), dpi=200)
+fig, ax = plt.subplots(figsize=(6.6, 4.4), dpi=200)
 ys = list(range(len(rows)))[::-1]
 for y, (label, a, b, note) in zip(ys, rows):
     ax.plot([a, b], [y, y], color=GRID, linewidth=2.4, zorder=2)
