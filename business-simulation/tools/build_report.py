@@ -156,7 +156,23 @@ P("We ran sixteen system-improvement programs by Q6: chemical collection and con
 
 # ================= 4
 H1("4. Main Results vs. Other Teams")
-P("Final cumulative balanced scorecard (end of Q6), AeroForge vs class:")
+P("Final standings — cumulative Total Performance by company (the official ranking):")
+table(
+    ["Rank", "Company", "Cumulative Total Perf.", "Q6 Total Perf. (final quarter)"],
+    [
+        ("1", "WBB", "54.121", "357.724"),
+        ("2", "NatuRide", "22.149", "101.200"),
+        ("3", "Spe3d", "8.662", "31.720"),
+        ("4", "Carbon-Ride", "2.918", "4.534"),
+        ("5", "The Bike Yard", "0.968", "3.318"),
+        ("6", "AeroForge", "0.703", "3.494"),
+    ],
+)
+P("Two readings of this table matter. First, the honest one: we finished sixth of six. Second, the "
+  "trajectory one: the gap to fifth place is 0.27 points — while fourth place sits at 2.9 and first at "
+  "54 — and on the final quarter taken alone we were no longer last (3.494 vs The Bike Yard's 3.318). "
+  "The turnaround had already begun overtaking a competitor when the game ended.")
+P("Final cumulative balanced scorecard, AeroForge vs class:")
 table(
     ["Cumulative metric", "Class min", "Class avg", "Class max", "AeroForge"],
     [
