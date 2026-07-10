@@ -94,7 +94,7 @@ P("Target segments: Mountain (primary) and Speed (secondary), with an opportunis
 P("The strategy unfolded in five phases: (1) Q1–Q2 set-up and test market — where we failed, by designing on "
   "intuition; (2) Q3 repair — rebuilt the Bolt from the revealed data, #1 Speed product within one quarter; "
   "(3) Q4 investment — VC funds into R&D features, capacity ×1.5, Amsterdam, compensation catch-up; "
-  "(4) Q5 expansion — 13→21 salespeople planned across three cities, proprietary tire features shipped, and "
+  "(4) Q5 expansion — sales force doubled to 13 across two cities, Bangalore opened, proprietary tire features shipped, and "
   "the enriched-carbon bet placed; (5) Q6 harvest — the whole range relaunched on enriched carbon, first "
   "profitable quarter of the company's history (+$708k net income on $3.0M revenue).")
 
@@ -109,7 +109,7 @@ P("Revenue grew ×13 from the test market to Q6 (226k → 373k → 740k → 1,44
   "loans, ending with $2.06M cash and a Financial Risk score of 1.000 — the class maximum, every single quarter. "
   "Why we still scored last on cumulative Financial Performance (14.4 vs class average 40.0): the index rewards "
   "accumulated profit, and our profits arrived one quarter before the game ended. Our Wealth score (0.620, class "
-  "minimum) tells the same story — $2.6M of accumulated losses against $5.0M of paid-in equity. This was the "
+  "minimum) tells the same story — −$1.9M of retained earnings against $5.0M of paid-in equity. This was the "
   "accounting shadow of a deliberate long-term strategy plus one genuinely failed quarter.")
 fig(f"{CH}/chart_finance.png", 5.6, "Figure 1 — Revenue and operating cash flow by quarter ($ thousands). "
     "The Q4–Q5 troughs are the planned deployment of the $2.5M venture round.")
@@ -119,7 +119,7 @@ P("Market share went 7.0% (Q3) → 7.1% (Q4) → 5.4% (Q5, as the whole market t
   "Market Performance finished last (0.071 vs average 0.159). The root causes are documented and split cleanly "
   "in two: first, two quarters of unrecommended product (our Mountain bike sat below the Customer Union's "
   "minimum rating until Q4, so the largest distribution channel of demand simply ignored us); second, chronic "
-  "under-capacity — we lost sales to stock-outs in every single quarter (42, 88, 79, then 1,083 units in Q6). "
+  "under-capacity — we lost sales to stock-outs in every quarter from Q3 onward (42, 88, 79, then 1,083 units in Q6). "
   "The product itself ended the game top-tier: brand judgments rose from 53/62/65 (Q2–Q3) to 87 Speed, 83 "
   "Mountain (top-2), 78 Recreation (top-2) in Q6; our ads scored 80–81 after the Q3 rebuild; price judgments "
   "were at or near 100 throughout. Q6 demand of 3,318 units — 84% above our own projection — proves the offer "
@@ -148,7 +148,7 @@ P("We ran sixteen system-improvement programs by Q6: chemical collection and con
   "reverse-flow air-filtration facility (a direct response to worker memos about carbon dust and epoxy vapour "
   "— our people told us before any metric did), protective equipment, air-filtering plants, a carbon-recycling "
   "consortium, cross-training, SPC, supplier quality programs, a fitness centre, daycare, school grants and "
-  "community bike trails. AeroForge was the only firm in the industry never cited for toxic leaks — the "
+  "community bike trails. AeroForge was never cited for toxic leaks — the "
   "newsletter repeatedly named four of our five competitors. Ethics showed up in small decisions too: we withdrew two "
   "advertising claims the moment the truth-in-advertising check flagged them, and we declined to buy a licence "
   "for technology we already owned rather than burn shareholder cash. Cumulative Reputation finished at 0.679 "

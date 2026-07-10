@@ -138,7 +138,7 @@ add_text(s, 0.7, 6.05, 12.0, 0.9, [
      ("2,235 bikes sold · $3.0M revenue · net income +$708k · demand (3,318) outgrew even our "
       "doubled factory.", 13.5, False, SEC, False)],
     [("Conscious scorecard: ", 13.5, True, INK, False),
-     ("only firm never cited for toxic leaks · employee satisfaction 88% · turnover 32%→11%.",
+     ("never cited for toxic leaks · satisfaction 88% · turnover 32%→11%.",
       13.5, False, SEC, False)],
 ], space_after=4)
 footer(s, 3, "Justine", "2:00")
@@ -150,7 +150,7 @@ notes(s, "JUSTINE (2:00)\n"
          "c'est le déploiement volontaire des 2,5 M$ de capital-risque — R&D, capacité, magasins — "
          "exactement comme promis au business plan. Et ça a payé : premier trimestre rentable au Q6 — "
          "+708 k$ de résultat net, 2 235 vélos vendus, demande de 3 318 qui dépasse même notre usine "
-         "doublée. Côté Conscious Capitalism : seule entreprise jamais citée pour fuites toxiques, "
+         "doublée. Côté Conscious Capitalism : jamais cités pour fuites toxiques (4 concurrents sur 5 l’ont été), "
          "satisfaction employés 88 %, turnover divisé par trois. [Passe à Luna]")
 
 # ================================================================ SLIDE 4
