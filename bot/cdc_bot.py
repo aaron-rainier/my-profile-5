@@ -126,6 +126,8 @@ def save_state(path, state):
 def run(mode):
     path = os.environ["BOT_STATE"]
     state = load_state(path)
+    if mode == "live" and not os.path.exists(path):
+        save_state(path, state)  # fige le début de la semaine dès le premier passage
     now = datetime.now(timezone.utc)
     end = datetime.fromisoformat(state["start"]) + DURATION
     mid, high24 = market()
