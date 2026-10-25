@@ -93,7 +93,9 @@ def decide(mid, high24, qty, cost, cash, sell_value, avg_mid, eur_free, now, end
     held = qty > 0
     pnl = cash + sell_value
     if now >= end:
-        return ("SELL", "fin de la semaine") if held else ("STOP", "semaine terminée")
+        if held and sell_value > cost:
+            return "SELL", "fin de la semaine, en gain"
+        return "STOP", "semaine terminée" + (", BTC gardé pour ne pas vendre à perte" if held else "")
     if pnl <= -MAX_LOSS:
         if held:
             return "SELL", f"stop-loss ({pnl:+.2f} €)"
@@ -198,9 +200,11 @@ def backtest(weeks=8, step=3, eur=10.0):
             elif action == "SELL":
                 qty, cost, cash, free, mid_cost, n = 0.0, 0.0, cash + sell_value, free + sell_value, 0.0, n + 1
         p0, p1 = float(c[first]["c"]), float(c[last]["c"])
+        kept = qty * p1 * (1 - APP_SPREAD)
         day = datetime.fromtimestamp(c[first]["t"] / 1000, timezone.utc)
-        print(f"semaine du {day:%d/%m} : bot {cash:+.2f} € en {n} ordres | BTC {(p1 / p0 - 1) * 100:+.1f} %")
-        total += cash
+        print(f"semaine du {day:%d/%m} : bot {cash + kept:+.2f} € en {n} ordres"
+              f"{f' (dont {kept:.2f} € de BTC gardé)' if qty else ''} | BTC {(p1 / p0 - 1) * 100:+.1f} %")
+        total += cash + kept
     print(f"total bot sur {weeks} semaines avec {eur:.0f} € : {total:+.2f} €")
 
 
