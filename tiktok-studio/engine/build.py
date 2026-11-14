@@ -81,7 +81,8 @@ def filt(x, kind, freq, order=2):
 def tick(freq=1500.0):
     t = axis(0.07)
     s = np.sin(2 * np.pi * freq * t) * np.exp(-t / 0.010) + 0.5 * np.sin(2 * np.pi * freq * 1.5 * t) * np.exp(-t / 0.006)
-    return s + 0.3 * rng.standard_normal(len(t)) * np.exp(-t / 0.0015)
+    click = 0.2 * rng.standard_normal(len(t)) * np.exp(-t / 0.0015)
+    return (s + click) * np.minimum(1, t / 0.0005)
 
 
 def boom(f0=120.0, f1=42.0, d=0.5, tau=0.12):
@@ -206,7 +207,7 @@ def soundtrack(tl, voice):
     # --- voix
     vox.add(voice["intro"], 0.08)
     for lv, v in zip(L, voice["levels"]):
-        vox.add(v, lv["rev"] + 0.14)
+        vox.add(v, lv["rev"] + 0.3)
     vox.add(voice["outro"], tl["outro"]["start"] + 0.35)
 
     # --- accroche : impact, défilement, montée
@@ -233,7 +234,7 @@ def soundtrack(tl, voice):
             else:
                 sfx.add(tick(1050), lv["cd"] + s + 0.5, 0.16)
         sfx.add(pop(), lv["hintAt"], 0.3)
-        sfx.add(ding(), lv["rev"], 0.42)
+        sfx.add(ding(), lv["rev"], 0.36)
         sfx.add(boom(100, 50, 0.3, 0.08), lv["rev"], 0.4)
 
     # --- outro : montée des dix tuiles puis accord final
@@ -247,7 +248,11 @@ def soundtrack(tl, voice):
 
     # --- nappe musicale : basse pulsée, pied, charley, arpège (la tension monte avec le niveau)
     roots = [55.0, 55.0, 43.65, 49.0]            # la mineur : Am, Am, F, G
-    arp = [220.0, 261.63, 329.63, 392.0, 440.0, 392.0, 329.63, 261.63]
+    arps = {                                     # arpège : uniquement des notes de l'accord en cours
+        55.0: [220.0, 261.63, 329.63, 440.0, 523.25, 440.0, 329.63, 261.63],     # la mineur
+        43.65: [174.61, 220.0, 261.63, 349.23, 440.0, 349.23, 261.63, 220.0],    # fa majeur
+        49.0: [196.0, 246.94, 293.66, 392.0, 493.88, 392.0, 293.66, 246.94],     # sol majeur
+    }
     start = tl["intro"]["end"]
     eighths = int((total - start) / (BEAT / 2))
     for e in range(eighths):
@@ -267,6 +272,7 @@ def soundtrack(tl, voice):
             bed.add(filt(rng.standard_normal(len(th)), "highpass", 7000) * np.exp(-th / 0.012), t, 0.07)
         if lvl >= 4:  # arpège : croches d'abord, doubles croches à partir du niveau 7, une octave plus haut au niveau 9
             for half in ((0, 1) if lvl >= 7 else (1,)):
+                arp = arps[root]
                 idx = (e * 2 + half) % len(arp)
                 bed.add(pluck(arp[idx] * (2 if lvl >= 9 else 1), 0.3, 0.08), t + half * BEAT / 4, 0.08, pan=0.45 if (e * 2 + half) % 2 else -0.45)
     # nappe tenue, du début à la fin
@@ -346,7 +352,7 @@ def main():
         run(["node", "engine/render.mjs", tl_path, work / "video.mp4"])
     final = OUT / f"{ep['id']}.mp4"
     run(["ffmpeg", "-y", "-loglevel", "error", "-i", work / "video.mp4", "-i", work / "audio.wav", "-c:v", "copy",
-         "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", final])
+         "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart", final])
     run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "2.4", "-i", final, "-frames:v", "1", "-q:v", "2", OUT / f"{ep['id']}-couverture.jpg"])
     post = ep.get("post", {})
     (OUT / f"{ep['id']}-legende.txt").write_text(

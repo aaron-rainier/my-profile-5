@@ -11,16 +11,16 @@
     "say": "Dix capitales pièges. La plus grande ville n'est pas toujours la capitale."
   },
   "levels": [
-    { "cc": "es", "qsmall": "Quelle est la capitale", "question": "de l'Espagne ?", "name": "Madrid", "say": "Madrid !", "hint": "Commence par un M", "fact": "Et non Barcelone", "timer": 4 },
-    { "cc": "ca", "qsmall": "Quelle est la capitale", "question": "du Canada ?", "name": "Ottawa", "say": "Ottawa !", "hint": "Commence par un O", "fact": "Et non Toronto ni Montréal", "timer": 4 },
-    { "cc": "au", "qsmall": "Quelle est la capitale", "question": "de l'Australie ?", "name": "Canberra", "say": "Canberra !", "hint": "Commence par un C", "fact": "Et non Sydney ni Melbourne", "timer": 4 },
-    { "cc": "ma", "qsmall": "Quelle est la capitale", "question": "du Maroc ?", "name": "Rabat", "say": "Rabat !", "hint": "Commence par un R", "fact": "Et non Casablanca ni Marrakech", "timer": 4 },
-    { "cc": "br", "qsmall": "Quelle est la capitale", "question": "du Brésil ?", "name": "Brasilia", "say": "Brasilia !", "hint": "Commence par un B", "fact": "Et non Rio de Janeiro", "timer": 5 },
-    { "cc": "tr", "qsmall": "Quelle est la capitale", "question": "de la Turquie ?", "name": "Ankara", "say": "Ankara !", "hint": "Commence par un A", "fact": "Et non Istanbul", "timer": 5 },
-    { "cc": "ch", "qsmall": "Quelle est la capitale", "question": "de la Suisse ?", "name": "Berne", "say": "Berne !", "hint": "Commence par un B", "fact": "Ville fédérale, et non Genève ni Zurich", "timer": 5 },
-    { "cc": "nz", "qsmall": "Quelle est la capitale", "question": "de la Nouvelle-Zélande ?", "name": "Wellington", "say": "Ouélinntonne !", "hint": "Commence par un W", "fact": "Et non Auckland", "timer": 5 },
-    { "cc": "ng", "qsmall": "Quelle est la capitale", "question": "du Nigeria ?", "name": "Abuja", "say": "Aboudja !", "hint": "Commence par un A", "fact": "Capitale depuis 1991, et non Lagos", "timer": 5 },
-    { "cc": "mm", "qsmall": "Quelle est la capitale", "question": "de la Birmanie ?", "name": "Naypyidaw", "say": "Népyidau !", "hint": "Commence par un N", "fact": "Capitale depuis 2005, et non Rangoun", "timer": 5 }
+    { "cc": "es", "qsmall": "Quelle est la capitale", "question": "de l'Espagne ?", "name": "Madrid", "say": "C'est Madrid !", "hint": "Commence par un M", "fact": "Et non Barcelone", "timer": 4 },
+    { "cc": "ca", "qsmall": "Quelle est la capitale", "question": "du Canada ?", "name": "Ottawa", "say": "C'est Ottawa !", "hint": "Commence par un O", "fact": "Et non Toronto ni Montréal", "timer": 4 },
+    { "cc": "au", "qsmall": "Quelle est la capitale", "question": "de l'Australie ?", "name": "Canberra", "say": "C'est Canberra !", "hint": "Commence par un C", "fact": "Et non Sydney ni Melbourne", "timer": 4 },
+    { "cc": "ma", "qsmall": "Quelle est la capitale", "question": "du Maroc ?", "name": "Rabat", "say": "C'est Rabat !", "hint": "Commence par un R", "fact": "Et non Casablanca ni Marrakech", "timer": 4 },
+    { "cc": "br", "qsmall": "Quelle est la capitale", "question": "du Brésil ?", "name": "Brasilia", "say": "C'est Brasilia !", "hint": "Commence par un B", "fact": "Et non Rio de Janeiro", "timer": 5 },
+    { "cc": "tr", "qsmall": "Quelle est la capitale", "question": "de la Turquie ?", "name": "Ankara", "say": "C'est Ankara !", "hint": "Commence par un A", "fact": "Et non Istanbul", "timer": 5 },
+    { "cc": "ch", "qsmall": "Quelle est la capitale", "question": "de la Suisse ?", "name": "Berne", "say": "C'est Berne !", "hint": "Commence par un B", "fact": "Ville fédérale, et non Genève ni Zurich", "timer": 5 },
+    { "cc": "nz", "qsmall": "Quelle est la capitale", "question": "de la Nouvelle-Zélande ?", "name": "Wellington", "say": "C'est Ouélinntonne !", "hint": "Commence par un W", "fact": "Et non Auckland", "timer": 5 },
+    { "cc": "ng", "qsmall": "Quelle est la capitale", "question": "du Nigeria ?", "name": "Abuja", "say": "C'est Aboudja !", "hint": "Commence par un A", "fact": "Capitale depuis 1991, et non Lagos", "timer": 5 },
+    { "cc": "mm", "qsmall": "Quelle est la capitale", "question": "de la Birmanie ?", "name": "Naypyidaw", "say": "C'est Népyidau !", "hint": "Commence par un N", "fact": "Capitale depuis 2005, et non Rangoun", "timer": 5 }
   ],
   "outro": {
     "lines": ["T'es tombé", "à quel niveau ?"],
