@@ -1,0 +1,36 @@
+{
+  "id": "002-drapeaux",
+  "mode": "flag",
+  "prompt": "Quel est ce pays ?",
+  "intro": {
+    "kicker": "Quiz géo",
+    "lines": ["À qui sont", "ces 10 drapeaux ?"],
+    "accentLine": 1,
+    "teaser": "Niveau 10 : ???",
+    "sub": "Presque personne n'arrive au niveau 10 💀",
+    "say": "À qui sont ces dix drapeaux ? Presque personne n'arrive au niveau dix."
+  },
+  "levels": [
+    { "cc": "jp", "name": "Japon", "say": "Le Japon !", "hint": "Asie de l'Est", "fact": "Le pays du Soleil-Levant", "timer": 4 },
+    { "cc": "ca", "name": "Canada", "say": "Le Canada !", "hint": "Amérique du Nord", "fact": "La feuille d'érable, depuis 1965", "timer": 4 },
+    { "cc": "br", "name": "Brésil", "say": "Le Brésil !", "hint": "Amérique du Sud", "fact": "Sa devise : Ordre et Progrès", "timer": 4 },
+    { "cc": "ar", "name": "Argentine", "say": "L'Argentine !", "hint": "Amérique du Sud", "fact": "Au centre, le Soleil de Mai", "timer": 4 },
+    { "cc": "kr", "name": "Corée du Sud", "say": "La Corée du Sud !", "hint": "Asie de l'Est", "fact": "Ce drapeau s'appelle le Taegeukgi", "timer": 5 },
+    { "cc": "za", "name": "Afrique du Sud", "say": "L'Afrique du Sud !", "hint": "Afrique australe", "fact": "Six couleurs, adopté en 1994", "timer": 5 },
+    { "cc": "jm", "name": "Jamaïque", "say": "La Jamaïque !", "hint": "Caraïbes", "fact": "Le seul drapeau sans rouge, blanc ni bleu", "timer": 5 },
+    { "cc": "lk", "name": "Sri Lanka", "say": "Le Sri Lanka !", "hint": "Asie du Sud", "fact": "Un lion qui tient une épée", "timer": 5 },
+    { "cc": "kz", "name": "Kazakhstan", "say": "Le Kazakhstan !", "hint": "Asie centrale", "fact": "Un aigle sous un soleil à 32 rayons", "timer": 5 },
+    { "cc": "ki", "name": "Kiribati", "say": "Kiribati !", "hint": "Océan Pacifique", "fact": "Une frégate au-dessus du soleil levant", "timer": 5 }
+  ],
+  "outro": {
+    "lines": ["T'es tombé", "à quel niveau ?"],
+    "accentLine": 1,
+    "cta": "Dis-le en commentaire 👇",
+    "cta2": "Abonne-toi pour le prochain quiz",
+    "say": "Tu es tombé à quel niveau ? Dis-le en commentaire, et abonne-toi pour le prochain quiz."
+  },
+  "post": {
+    "caption": "10 drapeaux, du plus facile à l'impossible 🚩 Tu es tombé à quel niveau ? Dis-le en commentaire 👇",
+    "hashtags": ["quiz", "drapeaux", "geographie", "culturegenerale", "quizgeo", "devineledrapeau"]
+  }
+}

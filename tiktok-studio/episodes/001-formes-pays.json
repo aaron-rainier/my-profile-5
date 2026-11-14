@@ -1,0 +1,36 @@
+{
+  "id": "001-formes-pays",
+  "mode": "shape",
+  "prompt": "Quel est ce pays ?",
+  "intro": {
+    "kicker": "Quiz géo",
+    "lines": ["Reconnais", "ces 10 pays", "à leur forme"],
+    "accentLine": 1,
+    "teaser": "Niveau 10 : ???",
+    "sub": "Presque personne n'arrive au niveau 10 💀",
+    "say": "Reconnais ces dix pays à leur forme. Presque personne n'arrive au niveau dix."
+  },
+  "levels": [
+    { "iso": "250", "cc": "fr", "name": "France", "say": "La France !", "hint": "Europe de l'Ouest", "fact": "Surnommée l'Hexagone", "timer": 4, "bbox": [-6, 41, 10, 52] },
+    { "iso": "380", "cc": "it", "name": "Italie", "say": "L'Italie !", "hint": "Europe du Sud", "fact": "La fameuse botte", "timer": 4 },
+    { "iso": "036", "cc": "au", "name": "Australie", "say": "L'Australie !", "hint": "Océanie", "fact": "Un pays grand comme un continent", "timer": 4, "bbox": [110, -45, 155, -10] },
+    { "iso": "392", "cc": "jp", "name": "Japon", "say": "Le Japon !", "hint": "Asie de l'Est", "fact": "Plus de 14 000 îles", "timer": 4, "bbox": [128, 30, 147, 46] },
+    { "iso": "152", "cc": "cl", "name": "Chili", "say": "Le Chili !", "hint": "Amérique du Sud", "fact": "4 300 km du nord au sud", "timer": 5, "bbox": [-76, -56, -66, -17] },
+    { "iso": "450", "cc": "mg", "name": "Madagascar", "say": "Madagascar !", "hint": "Océan Indien", "fact": "4e plus grande île du monde", "timer": 5 },
+    { "iso": "578", "cc": "no", "name": "Norvège", "say": "La Norvège !", "hint": "Europe du Nord", "fact": "Le pays des fjords", "timer": 5, "bbox": [4, 57, 32, 71.5] },
+    { "iso": "764", "cc": "th", "name": "Thaïlande", "say": "La Thaïlande !", "hint": "Asie du Sud-Est", "fact": "Sa forme évoque une tête d'éléphant", "timer": 5 },
+    { "iso": "191", "cc": "hr", "name": "Croatie", "say": "La Croatie !", "hint": "Europe · Balkans", "fact": "Plus de 1 000 îles sur l'Adriatique", "timer": 5 },
+    { "iso": "270", "cc": "gm", "name": "Gambie", "say": "La Gambie !", "hint": "Afrique de l'Ouest", "fact": "Le plus petit pays d'Afrique continentale", "timer": 5 }
+  ],
+  "outro": {
+    "lines": ["T'es tombé", "à quel niveau ?"],
+    "accentLine": 1,
+    "cta": "Dis-le en commentaire 👇",
+    "cta2": "Abonne-toi pour le prochain quiz",
+    "say": "Tu es tombé à quel niveau ? Dis-le en commentaire, et abonne-toi pour le prochain quiz."
+  },
+  "post": {
+    "caption": "10 pays à reconnaître à leur forme, du plus facile à l'impossible 🌍 Tu es tombé à quel niveau ? Dis-le en commentaire 👇",
+    "hashtags": ["quiz", "geographie", "culturegenerale", "pays", "quizgeo", "devinelepays"]
+  }
+}

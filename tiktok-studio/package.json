@@ -1,0 +1,13 @@
+{
+  "name": "tiktok-studio",
+  "private": true,
+  "type": "module",
+  "description": "Générateur de vidéos quiz verticales (série « Niveau 10 »)",
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "flag-icons": "^7.2.3",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2",
+    "@fontsource/anton": "^5.1.0"
+  }
+}
