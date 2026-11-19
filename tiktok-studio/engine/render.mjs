@@ -7,23 +7,12 @@ import { createRequire } from 'node:module';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { cpus } from 'node:os';
+import { fontCss } from './fonts.mjs';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, '..');
-
-function fontCss() {
-  const dir = join(ROOT, 'node_modules/@fontsource/anton/files');
-  const face = (file, range) => {
-    const b64 = readFileSync(join(dir, file)).toString('base64');
-    return `@font-face{font-family:'Anton';font-weight:400;font-style:normal;src:url(data:font/woff2;base64,${b64}) format('woff2');unicode-range:${range};}`;
-  };
-  return [
-    face('anton-latin-400-normal.woff2', 'U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD'),
-    face('anton-latin-ext-400-normal.woff2', 'U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF'),
-  ].join('\n');
-}
 
 function pageHtml(timeline) {
   return readFileSync(join(HERE, 'template.html'), 'utf8')
