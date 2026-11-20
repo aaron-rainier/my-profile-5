@@ -25,6 +25,27 @@ def run(cmd, **kw):
     return subprocess.run([str(c) for c in cmd], check=True, cwd=ROOT, **kw)
 
 
+def village_ambience(dur):
+    """Fond sonore discret pour un clip muet : souffle de vent, quelques oiseaux, une cloche au loin."""
+    rng = np.random.default_rng(7)
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    wind = build.filt(rng.standard_normal(n), "lowpass", 500) * (0.6 + 0.4 * np.sin(2 * np.pi * 0.13 * t + 1.0))
+    bed = build.Mix(dur)
+    bed.buf[:n] += (wind / np.abs(wind).max() * 0.035)[:, None]
+    for _ in range(int(dur * 0.9)):                       # gazouillis : petites notes aiguës qui glissent
+        at, base = rng.uniform(0.5, dur - 1.0), rng.uniform(2800, 4600)
+        for k in range(rng.integers(2, 5)):
+            tt = build.axis(0.09)
+            f = base * (1 + 0.25 * np.sin(2 * np.pi * rng.uniform(6, 14) * tt)) + rng.uniform(-300, 300)
+            chirp = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.sin(np.pi * tt / 0.09) ** 2
+            bed.add(chirp, at + k * rng.uniform(0.10, 0.16), rng.uniform(0.012, 0.03), pan=rng.uniform(-0.8, 0.8))
+    if dur > 6:                                            # une cloche lointaine vers la fin
+        bell = build.filt(build.bell(392.0, 3.0, 0.9), "lowpass", 1500)
+        bed.add(bell, dur - 3.4, 0.045, pan=-0.3)
+    return bed.buf
+
+
 def main():
     cfg = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
     src = Path(sys.argv[2]).resolve()
@@ -40,10 +61,15 @@ def main():
     # --- calques : bandeau permanent, un sous-titre par réplique
     lines = cfg["lines"]
     voices = [build.tts(l["say"], l.get("speed", 1.0)) for l in lines]
+    layout = cfg.get("layout", {})
+    top = layout.get("banner_top", 1196)          # haut du bandeau, en pixels sur 1920
+    cap = layout.get("caption_top")               # haut des sous-titres ; par défaut juste au-dessus du bandeau
+    cap_style = f' style="top:{cap}px;bottom:auto"' if cap is not None else ""
     jobs = [{"out": str(work / "bandeau.png"),
-             "html": f'<div class="tag anton">{html.escape(cfg["banner"]["tag"])}</div><div class="title anton">{html.escape(cfg["banner"]["title"])}</div>'}]
+             "html": f'<div class="tag anton" style="top:{top}px">{html.escape(cfg["banner"]["tag"])}</div>'
+                     f'<div class="title anton" style="top:{top + 86}px">{html.escape(cfg["banner"]["title"])}</div>'}]
     for i, l in enumerate(lines):
-        jobs.append({"out": str(work / f"cap{i}.png"), "html": f'<div class="cap"><span>{html.escape(l["text"])}</span></div>'})
+        jobs.append({"out": str(work / f"cap{i}.png"), "html": f'<div class="cap"{cap_style}><span>{html.escape(l["text"])}</span></div>'})
     run(["node", "engine/overlay.mjs"], input=json.dumps(jobs), text=True)
 
     # --- son : ambiance d'origine sous la voix, petit carillon d'ouverture
@@ -60,6 +86,8 @@ def main():
         k = int(0.08 * SR)
         duck = np.convolve(duck, np.ones(k) / k, mode="same")
         mix.buf[:len(amb)] += amb * duck[:, None]
+    else:
+        mix.buf[:n] += village_ambience(dur)[:n]
     if cfg.get("chime", True):
         for f, at in ((880.0, 0.0), (1174.66, 0.14)):
             mix.add(build.bell(f, 0.9, 0.22), at, 0.16)

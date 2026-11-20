@@ -1,10 +1,11 @@
 {
   "id": "clip-001-operation-escargot",
   "banner": { "tag": "Info trafic", "title": "Opération escargot en Bourgogne" },
+  "layout": { "banner_top": 1350, "caption_top": 290 },
   "lines": [
     { "at": 0.35, "text": "Info trafic. Opération escargot en Bourgogne.", "say": "Info trafic. Opération escargot en Bourgogne." },
-    { "at": 4.0, "text": "Un seul manifestant. Vitesse de pointe : 4 mètres à l'heure.", "say": "Un seul manifestant. Vitesse de pointe : quatre mètres à l'heure." },
-    { "at": 8.9, "text": "Retour à la normale prévu au printemps.", "say": "Retour à la normale prévu au printemps." }
+    { "at": 3.9, "text": "Un seul manifestant. Vitesse de pointe : 4 mètres à l'heure.", "say": "Un seul manifestant. Vitesse de pointe : quatre mètres à l'heure." },
+    { "at": 8.4, "text": "Retour à la normale prévu au printemps.", "say": "Retour à la normale prévu au printemps." }
   ],
   "post": {
     "caption": "Opération escargot en Bourgogne. La préfecture rappelle que le beurre persillé n'est pas une solution. On bloque quelle région ensuite ? (vidéo générée par IA)",
